@@ -7,6 +7,8 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\TermAndConditionController;
 use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\ContactController;
+
+use App\Http\Controllers\IntakeFormController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -36,3 +38,8 @@ Route::post("/privacy",[PrivacyController::class,'privacyAdd']);
 Route::get("/privacy",[PrivacyController::class,'privacyGet']);
 
 Route::post("/email-send",[ContactController::class,'emailSend']);
+
+
+Route::post("/intake-form",[IntakeFormController::class,'formSubmit']);
+Route::get("/payment/success",[IntakeFormController::class,'paymentSuccess']);
+Route::get("/payment/cancel",[IntakeFormController::class,'paymentCancel']);

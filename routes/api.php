@@ -41,5 +41,5 @@ Route::post("/email-send",[ContactController::class,'emailSend']);
 
 
 Route::post("/intake-form",[IntakeFormController::class,'formSubmit']);
-Route::get("/payment/success",[IntakeFormController::class,'paymentSuccess']);
-Route::get("/payment/cancel",[IntakeFormController::class,'paymentCancel']);
+Route::post("/progress-report",[IntakeFormController::class,'existingPatient']);
+

@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('intakeforms', function (Blueprint $table) {
+        Schema::create('intake_forms', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->date("birthDate");
+            $table->date("dateOfBirth");
             $table->string("address");
-            $table->string("mobile_phone");
+            $table->string("phoneNumber");
             $table->string("email");
             $table->string("contactBy");
             $table->string("mailAddWithUser");
             $table->string("occupation");
-            $table->longText("reasonForVisit");
+            $table->longText("reasonOfVisit");
             $table->longText("allergies");
             $table->longText("presentMedication");
             $table->string("prefarableTime");
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('intakeforms');
+        Schema::dropIfExists('intake_forms');
     }
 };

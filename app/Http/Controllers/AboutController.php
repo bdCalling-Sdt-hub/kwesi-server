@@ -16,7 +16,7 @@ class AboutController extends Controller
         $validator = Validator::make($request->all(),[
             'title' => 'required|string|min:2|max:100',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:3048',
-            'description'=>'required|string|min:20|max:1000'
+            'description'=>'required|string|min:20|max:5000'
 
       ]);
 

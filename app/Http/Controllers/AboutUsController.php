@@ -13,6 +13,7 @@ class AboutUsController extends Controller
 
     public function aboutusAdd(Request $request){
 
+        
         $validator = Validator::make($request->all(),[
             'title' => 'required|string|min:2|max:100',
             'description'=>'required|string|min:20'

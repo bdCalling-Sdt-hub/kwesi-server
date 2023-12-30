@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\TermAndConditionController;
-use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\privacyController;
 use App\Http\Controllers\ContactController;
 
 use App\Http\Controllers\IntakeFormController;
@@ -34,8 +34,8 @@ Route::get("/aboutus",[AboutUsController::class,'aboutusGet']);
 Route::post("/term",[TermAndConditionController::class,'termAdd']);
 Route::get("/term",[TermAndConditionController::class,'termGet']);
 
-Route::post("/privacy",[PrivacyController::class,'privacyAdd']);
-Route::get("/privacy",[PrivacyController::class,'privacyGet']);
+Route::post("/privacy",[privacyController::class,'privacyAdd']);
+Route::get("/privacy",[privacyController::class,'privacyGet']);
 
 Route::post("/email-send",[ContactController::class,'emailSend']);
 

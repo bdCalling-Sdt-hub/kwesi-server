@@ -36,10 +36,10 @@ class IntakeFormController extends Controller
    ]);
 
     if ($validator->fails()){
-      return response()->json(["errors"=>$validator->errors()],400);
+      return response()->json(["message"=>"Validation error","errors"=>$validator->errors()],400);
     }
     $existingUser = IntakeForm::where('email', $request->email)->latest()->first();
-    
+
     $currentTime = Carbon::now();
 
 
@@ -126,14 +126,14 @@ class IntakeFormController extends Controller
             // Handle the case where the time is less than 3 months
             return response()->json([
                 "message"=>"You are existing patient.please go existing patient page and submit your progress report.Thank you."
-               ]);
+               ],412);
         }
 
     }
 
    return response()->json([
     "message"=>"You are existing patient.please go existing patient page and submit your progress report.Thank you."
-   ]);
+   ],412);
 
  }
 
@@ -158,7 +158,7 @@ class IntakeFormController extends Controller
    ]);
 
     if ($validator->fails()){
-      return response()->json(["errors"=>$validator->errors()],400);
+      return response()->json(["message"=>"Validation error","errors"=>$validator->errors()],400);
     }
 
     $userExists=IntakeForm::where("email",$request->email)->latest()->first();
@@ -225,7 +225,7 @@ class IntakeFormController extends Controller
 
       return response()->json([
             "message"=>"You are not existing patient."
-        ]);
+        ],412);
     }
 
 

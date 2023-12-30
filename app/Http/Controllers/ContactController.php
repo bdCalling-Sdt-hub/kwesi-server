@@ -25,7 +25,7 @@ class ContactController extends Controller
       ]);
 
       if ($validator->fails()){
-        return response()->json(["errors"=>$validator->errors()],400);
+        return response()->json(["message"=>"Validation error","errors"=>$validator->errors()],400);
        }
 
        $email=env("MAIL_FROM_ADDRESS");
@@ -40,7 +40,7 @@ class ContactController extends Controller
        Mail::to("freelancerrtushar@gmail.com")->send(new ContactMail($mailData));
 
        //dd("Email send successfully");
-       return response()->json(["data"=>"Email send successfully"]);
+       return response()->json(["data"=>"Email sent successfully"]);
 
     }
 }

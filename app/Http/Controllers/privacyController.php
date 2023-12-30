@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Privacy;
 use Illuminate\Support\Facades\Validator;
 
-class privacyController extends Controller
+class PrivacyController extends Controller
 {
 
     public function privacyAdd(Request $request){

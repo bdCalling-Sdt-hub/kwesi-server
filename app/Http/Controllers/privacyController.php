@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 
 class PrivacyController extends Controller
 {
-
+   //update class name
     public function privacyAdd(Request $request){
 
         $validator = Validator::make($request->all(),[

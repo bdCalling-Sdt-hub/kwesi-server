@@ -23,15 +23,15 @@ class IntakeFormController extends Controller
         'name' => 'required|string|min:2|max:100',
         'dateOfBirth'=>'required| date',
         "address"=>'required|string|min:2|max:200',
-        "phoneNumber"=>'required|string|min:10',
-        'email'=>'required|string|email|min:10',
-        "contactBy"=>'required|string|min:5',
+        "phoneNumber"=>'required|string',
+        'email'=>'required|string|email',
+        "contactBy"=>'required|string',
         "mailAddWithUser"=>'required|string',
-        "occupation"=>'required|string|min:5',
+        "occupation"=>'required|string',
         "reasonOfVisit"=>'required|string',
-        "allergies"=>'required|string|min:5',
-        "presentMedication"=>'required|string|min:5',
-        "prefarableTime"=>'required|string|min:5'
+        "allergies"=>'required|string',
+        "presentMedication"=>'required|string',
+        "prefarableTime"=>'required|string'
 
    ]);
 
